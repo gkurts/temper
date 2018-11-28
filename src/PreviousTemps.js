@@ -31,8 +31,8 @@ const PreviousTemps = ({ temps, classes }) => {
   return (
     <List>
       {temps.map(temp => (
-        <Fragment>
-          <TempListItem key={temp.id} temp={temp} classes={classes} />
+        <Fragment key={temp.id}>
+          <TempListItem temp={temp} classes={classes} />
           <Divider />
         </Fragment>
       ))}

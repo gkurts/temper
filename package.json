@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "dotenv": "^6.1.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -37,8 +38,9 @@
     "start": "parcel src/index.html --open",
     "dev": "",
     "clean:dist": "rimraf dist",
-    "build": "parcel build src/index.html",
-    "prebuild": "npm run clean:dist",
+    "build": "parcel build src/index.html; echo \"built package\"",
+    "prebuild": "npm run clean:dist; echo \"cleaned dist folder\"",
+    "postbuild": "cp src/favicon.ico dist; echo \"copied favicon\"",
     "update-interactive": "npm-check --update"
   }
 }

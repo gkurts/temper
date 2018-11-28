@@ -11,8 +11,6 @@ import useTemps from "./useTemps";
 function App() {
   const temps = useTemps();
 
-  console.log("temps", temps);
-
   return (
     <div className="App">
       <CssBaseline />
