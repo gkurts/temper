@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-const LAST10_URL = process.env.LAST10_URL;
+import { useState, useEffect } from 'react';
+
+const { LAST10_URL } = process.env;
 
 const useTemps = () => {
   const [temps, setTemps] = useState([]);
